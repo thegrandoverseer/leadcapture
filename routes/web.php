@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LeadController@create');
+
+Route::put('/updateOrCreateLead', 'LeadController@updateOrCreate');
