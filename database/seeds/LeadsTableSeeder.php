@@ -12,6 +12,9 @@ class LeadsTableSeeder extends Seeder
      */
     public function run()
     {
+        /**
+         * Insert 100 new Leads, randomly filling only some of the fields
+         */
         factory(App\Lead::class, 100)->create()->each(function ($lead) {
             $lead->save();
         });

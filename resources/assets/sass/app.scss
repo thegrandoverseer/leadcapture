@@ -14,3 +14,50 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+#leadscontainer {
+  .pagination {
+    justify-content: center;
+  }
+}
+
+ul.leads-list {
+  &.list-group {
+    :hover {
+      background-color: #eaeaea;
+    }
+  
+    a:hover {    
+        text-decoration: none !important;
+    }
+  }  
+}
+
+@include media-breakpoint-down(xs) {
+  .request-form {
+    &.rounded {
+      border-radius: 0 !important;
+    }
+
+    &.mt-5 {
+      margin-top: 0 !important;
+    }
+
+    &.shadow {
+      box-shadow: none !important;
+    }
+
+    &.bg-gradient-primary {
+      background: transparent !important;
+    }
+
+    &.border {
+      border: none !important;
+    }
+
+    /*.btn-group-lg > .btn {
+      font-size: 0.9rem !important;
+      line-height: 1.6 !important;
+    }*/
+  }
+}

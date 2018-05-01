@@ -10,13 +10,7 @@ use App\Lead;
 use App\Http\Controllers\LeadController;
 
 class LeadTest extends TestCase
-{
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-        
+{        
     public function test_it_can_create_lead()
     {
         $lead = factory(Lead::class)->make();
