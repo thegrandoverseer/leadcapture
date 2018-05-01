@@ -16,6 +16,11 @@ class LeadController extends Controller
         $id = $this->getNewId();
         return view('lead.create', compact('id'));
     }
+
+    public function index(Request $request) {
+        $leads = Lead::orderBy('last_name', 'asc')->orderBy('first_name', 'asc')->orderBy('email', 'asc')->get();
+        return view('lead.list', compact('leads'));
+    }
     
     public function updateOrCreate(Request $request) {
         $data = $request->only([
@@ -34,6 +39,7 @@ class LeadController extends Controller
         
         
         $lead = Lead::updateOrCreate($request->only(['id']), $data);
+        
         if($request->ajax()){
             return response()->json($lead->toArray());
         } else {

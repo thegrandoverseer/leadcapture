@@ -12,7 +12,15 @@ use Webpatser\Uuid\Uuid;
 class LeadTest extends TestCase
 {
     use WithFaker;
+    use RefreshDatabase;
 
+    public function test_it_can_get_list_of_leads()
+    {
+        $res = $this->get('/leads');
+        $res->assertViewHas('leads');
+        
+    }
+    
     public function test_it_can_insert_then_update_lead()
     {
         $lead = ['id' => Uuid::generate()->string,  'first_name' => $this->faker->firstName];

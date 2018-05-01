@@ -14,3 +14,5 @@
 Route::get('/', 'LeadController@create');
 
 Route::put('/updateOrCreateLead', 'LeadController@updateOrCreate');
+
+Route::get('/leads', 'LeadController@index');
