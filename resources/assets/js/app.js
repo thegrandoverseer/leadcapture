@@ -1,22 +1,17 @@
 
 /**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
+ * Load project JS dependencies
  */
-
 require('./bootstrap');
 
-window.Vue = require('vue');
+/**
+ * Load quote-form.js to process the form on the Landing page with ajax,
+ * each time an input changes
+ */
+require('./quote-form');
 
 /**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
+ * Load auto-closing-alert.js to automatically dismiss alert messages
+ * with class=auto-closing-alert and optional data-numseconds attribute
  */
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
+require('./auto-closing-alert');

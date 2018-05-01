@@ -10,17 +10,9 @@
         <div class="request-form col-12 col-sm-8 col-md-6 col-xl-4 text-center jumbotron jumbotron-fluid bg-gradient bg-gradient-primary rounded border shadow p-4 mx-auto mt-3">
             
             @if(session('submitted'))
-                <div id="submitted-alert" class="text-center alert alert-success text-center mx-auto">
-                    Thanks! Your information was received.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="auto-closing-alert text-center alert alert-success text-center mx-auto" data-numseconds="5000">
+                    Thanks! Your information was received. A representative will be contacting you soon.
                 </div>
-                <script>
-                    setTimeout(function(){
-                        $('#submitted-alert').alert('close');
-                    }, 3000);
-                </script>
             @endif
 
             <form id="quoteForm" method="POST" autocomplete="off" action="/updateOrCreateLead" accept-charset="UTF-8">
@@ -63,7 +55,7 @@
                 </div>
                 
                 <div class="btn-group btn-group-lg" role="group" aria-label="Form buttons">
-                    <button type="submit" class="btn btn-secondary">Request a Quote</button>
+                    <button id="quoteFormSubmitButton" type="submit" class="btn btn-secondary">Send</button>
                     <button type="reset" class="btn">Reset</button>
                 </div>
 
