@@ -37,7 +37,7 @@
                 @yield('content')
             </div>
             
-            <!-- /FOOTER -->
+            
         </div>
         <!-- FOOTER -->
         <nav class="navbar fixed-bottom navbar-light bg-light">            
@@ -46,6 +46,7 @@
                 <a class="nav-link" href="/leads">Leads</a>
             </nav>
         </nav>
+        <!-- /FOOTER -->
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
