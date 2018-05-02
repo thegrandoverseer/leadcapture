@@ -6,11 +6,13 @@ The **Lead Capture** project is intended to be a proof of concept and code sampl
 * Allow a real estate agent to view a list of alphabetically ordered leads which have been captured
 * Allow a real estate agent to click on a lead in a list and view the detail of the lead
 
----
+I chose to use Laravel Framework, jQuery, Bootstrap and MySQL. 
 
-## Table of Contents
-    - [Installation](#installation)
-    - [Testing](#testing)
+I chose Laravel framework because the client indicated they use PHP in their stack, to aid in rapid prototyping, as well as to utilize built in features such as CSRF protection, a database ORM, built in templating support, etc.
+
+I made the choice to use jQuery, since the client indicated they use it in their stack. Another good choice would have been Vue.js.
+
+---
 
 ## Installation
 
@@ -20,7 +22,7 @@ Requirements:
 * Virtualbox
 * Vagrant
 
-Tested with Composer 1.6.3, VirtualBox 5.2.10 and Vagrant 2.0.4
+Tested with Composer 1.6.3, PHP 7.2, VirtualBox 5.2.10 and Vagrant 2.0.4
 
 Download or clone this repo, then `cd` to the root directory and execute the following commands:
 
