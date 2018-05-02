@@ -3,7 +3,7 @@
     {{-- content here --}}
 
     <div class="row">
-            <h2 class="col-12 col-sm-8 col-md-6 col-xl-4 text-center mx-auto mt-5">Get Your Free Comparitive Market Analysis</h2>
+            <h2 class="col-12 col-sm-8 col-md-6 col-xl-4 text-center mx-auto">Get Your Free Comparitive Market Analysis</h2>
     </div>
     <div class="row">   
         

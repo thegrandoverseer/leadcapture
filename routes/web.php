@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'LeadController@create');
+Route::get('/', 'LeadController@create')->name('lead.create');
 
-Route::put('/updateOrCreateLead', 'LeadController@updateOrCreate');
+Route::put('/updateOrCreateLead', 'LeadController@updateOrCreate')->name('lead.updateOrCreate');
 
 Route::get('/leads', 'LeadController@index')->name('leads.list');
 

@@ -11,22 +11,41 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+        <div class="flex-center position-ref full-height pb-5">
+            
+            <!-- NAV -->
+            <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-primary mb-5">
+                <a class="navbar-brand" href="/">{{ config('app.name', 'LeadCapture') }}</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavLinks" aria-controls="topNavLinks" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="topNavLinks">
+                    <ul class="navbar-nav navbar-right mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item {{ request()->route()->named('lead.create') ? 'active' : '' }}">
+                            <a class="nav-link" href="/">Free CMA<span class="sr-only"> (current)</span></a>
+                        </li>
+                        <li class="nav-item {{ request()->route()->named('leads.list') ? 'active' : '' }}">
+                            <a class="nav-link" href="/leads">Leads</a>
+                        </li>
+                    </ul>
                 </div>
-            @endif
+            </nav>
+            <!-- /NAV -->
 
             <div class="container-fluid content">
                 @yield('content')
             </div>
+            
+            <!-- /FOOTER -->
         </div>
+        <!-- FOOTER -->
+        <nav class="navbar fixed-bottom navbar-light bg-light">            
+            <nav class="nav">
+                <a class="nav-link" href="/">Free CMA</a>
+                <a class="nav-link" href="/leads">Leads</a>
+            </nav>
+        </nav>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
