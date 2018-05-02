@@ -1,10 +1,13 @@
-jQuery(document).ready(($) => {
-    $('.alert.auto-closing-alert').each(function (i) {
-        let $el = $(this),
-            numseconds = parseInt($el.data('numseconds') || 3000, 10);
-        
-        setTimeout(() => {
-            $el.alert('close');
-        }, numseconds, $el);
-    });
+/* eslint-env jquery */
+
+document.querySelectorAll('.alert.auto-closing-alert').forEach((el) => {
+    let numseconds = el.dataset.numseconds;
+
+    // console.log('el', el, '; numseconds', numseconds);
+
+    setTimeout(() => {
+        $(el).alert('close');
+    }, numseconds, el);
+
 });
+
